@@ -1,0 +1,410 @@
+.section {
+	background: #ffffff;
+	padding: 100px 0 90px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* ============ HEADER ============ */
+
+.eyebrow {
+	display: inline-block;
+	background: #fbdce8;
+	color: #c2255c;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 22px;
+}
+
+.heading {
+	font-size: 48px !important;
+	line-height: 1.25 !important;
+	font-weight: 800;
+	color: #14161a;
+	margin: 0 0 18px;
+	letter-spacing: -0.5px !important;
+	word-spacing: normal !important;
+}
+
+.highlight {
+	color: #e2601f;
+}
+
+.description {
+	max-width: 900px;
+	margin: 0 auto 48px;
+	font-size: 18px !important;
+	line-height: 1.65;
+	color: #667082;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+/* ============ PANEL ============ */
+
+.panel {
+	background: linear-gradient(115deg, #eeeafc 0%, #fdf1e8 100%);
+	border-radius: 28px;
+	padding: 44px 48px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1.35fr 0.4fr 1fr 0.4fr 1.35fr;
+	align-items: center;
+	gap: 0 6px;
+	text-align: left;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	position: relative;
+}
+
+.columnLabelLeft {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: #5b4fd6;
+	margin-bottom: 4px;
+}
+
+.columnLabelRight {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: #e2601f;
+	margin-bottom: 4px;
+}
+
+/* ---- systems cards (left) ---- */
+
+.systemCard {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: #fff;
+	border: 1px solid #f0eef2;
+	border-radius: 12px;
+	padding: 14px 16px;
+	box-shadow: 0 6px 16px rgba(20, 22, 26, 0.05);
+}
+
+.dashedCard {
+	border: 1.5px dashed #c7c2f5;
+	box-shadow: none;
+}
+
+.systemCard strong {
+	display: block;
+	font-size: 15px;
+	font-weight: 700;
+	color: #14161a;
+	line-height: 1.35;
+}
+
+.systemCard small {
+	display: block;
+	font-size: 12px;
+	color: #8a8f98;
+	margin-top: 2px;
+}
+
+.systemIcon {
+	flex-shrink: 0;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: #ece9fb;
+	color: #5b4fd6;
+	display: grid;
+	place-items: center;
+}
+
+/* ---- outcome cards (right) ---- */
+
+.outcomeCard {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	background: #fff;
+	border: 1px solid #f0eef2;
+	border-radius: 12px;
+	padding: 14px 16px;
+	box-shadow: 0 6px 16px rgba(20, 22, 26, 0.05);
+}
+
+.outcomeIcon {
+	flex-shrink: 0;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: #fdece0;
+	color: #e2601f;
+	display: grid;
+	place-items: center;
+}
+
+.outcomeText {
+	flex: 1;
+	min-width: 0;
+}
+
+.outcomeTitleRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.outcomeTitleRow strong {
+	font-size: 13.5px;
+	font-weight: 700;
+	color: #14161a;
+}
+
+.outcomeText small {
+	display: block;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #8a8f98;
+	margin-top: 3px;
+}
+
+.badgePill {
+	flex-shrink: 0;
+	font-size: 9.5px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	padding: 3px 7px;
+	border-radius: 5px;
+}
+
+.badge-blue {
+	background: #e5edff;
+	color: #2f6fe0;
+}
+.badge-orange {
+	background: #fdece0;
+	color: #e2601f;
+}
+.badge-green {
+	background: #e5f8ee;
+	color: #17a463;
+}
+.badge-purple {
+	background: #eeeafc;
+	color: #5b4fd6;
+}
+
+/* ---- connectors ---- */
+
+.connectorLeft,
+.connectorRight {
+	width: 100%;
+	height: 320px;
+	opacity: 1;
+}
+
+.dashLeft {
+	stroke: #6d5cf5;
+	stroke-width: 1.4;
+	stroke-dasharray: 4 5;
+	opacity: 0.55;
+	fill: none;
+}
+
+.dashRight {
+	stroke: #e2601f;
+	stroke-width: 1.4;
+	stroke-dasharray: 4 5;
+	opacity: 0.55;
+	fill: none;
+}
+
+/* ---- center column ---- */
+
+.centerCol {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.hubBadge {
+	flex-shrink: 0;
+	width: 78px;
+	height: 36px;
+	border-radius: 50%;
+	/* background: #4f46e5; */
+	display: grid;
+	place-items: center;
+	box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
+	text-decoration: none;
+	margin-right: -30px;
+	z-index: 2;
+}
+
+.hubBadgeIcon {
+	width: 78px;
+	height: 36px;
+	object-fit: contain;
+}
+
+.hubBadgeDark {
+	margin-left: -30px;
+	margin-right: 0px;
+	/* background: #14161a;
+	box-shadow: 0 6px 14px rgba(20, 22, 26, 0.35); */
+}
+
+.hubArrow {
+	flex-shrink: 0;
+	color: #e2601f;
+}
+
+.device {
+	position: relative;
+	width: 234px;
+	background: #0e0f16;
+	border: 1.5px solid #e2401f;
+	border-radius: 20px;
+	padding: 32px;
+	text-align: center;
+	box-shadow: 0 0 0 6px rgba(226, 64, 31, 0.08), 0 30px 50px rgba(14, 15, 22, 0.35);
+}
+
+.deviceLogo {
+	/* width: 40px; */
+	height: 90px;
+	object-fit: contain;
+	margin: 0 auto 10px;
+}
+
+.device strong {
+	display: block;
+	font-size: 17px;
+	font-weight: 800;
+	color: #fff;
+}
+
+.device > small {
+	display: block;
+	font-size: 10px;
+	color: #9a9fac;
+	margin-top: -10px;
+}
+
+.device p {
+	font-size: 9px;
+	line-height: 1.5;
+	color: #6b7080;
+	margin: 12px 0 18px;
+}
+
+.deviceToolbar {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 6px;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	padding-top: 13px;
+}
+
+.deviceStep {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3px;
+}
+
+.deviceStep span {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #1c1e2b;
+	color: #fff;
+	display: grid;
+	place-items: center;
+}
+
+.deviceStepIcon {
+	width: 13px;
+	height: 13px;
+	object-fit: contain;
+}
+
+.deviceStep strong {
+	font-size: 7.5px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 2;
+}
+
+.deviceStep small {
+	font-size: 5.5px;
+	color: #6b7080;
+	line-height: 1;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 1100px) {
+	.panel {
+		padding: 32px 26px;
+	}
+	.grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+	.connectorLeft,
+	.connectorRight {
+		display: none;
+	}
+	.hubBadge,
+	.hubArrow {
+		display: none;
+	}
+	.centerCol {
+		order: 2;
+		justify-content: center;
+	}
+	.column:first-of-type {
+		order: 1;
+	}
+	.column:last-of-type {
+		order: 3;
+	}
+}
+
+@media (max-width: 640px) {
+	.section {
+		padding: 70px 0 60px;
+	}
+	.heading {
+		font-size: 26px !important;
+	}
+	.description {
+		font-size: 14px !important;
+		margin-bottom: 34px;
+	}
+	.panel {
+		padding: 24px 18px;
+		border-radius: 20px;
+	}
+	.device {
+		width: 100%;
+		max-width: 260px;
+		margin: 0 auto;
+	}
+}

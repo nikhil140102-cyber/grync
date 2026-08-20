@@ -1,0 +1,128 @@
+.section {
+	position: relative;
+	background: #100b18;
+	padding: 90px 0 100px;
+	overflow: hidden;
+}
+
+.section::before {
+	content: "";
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: 900px;
+	height: 700px;
+	transform: translate(-50%, 0);
+	background: radial-gradient(
+		circle,
+		rgba(214, 38, 111, 0.28) 0%,
+		rgba(120, 40, 140, 0.12) 40%,
+		rgba(16, 11, 24, 0) 70%
+	);
+	pointer-events: none;
+}
+
+.container {
+	position: relative;
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* ============ HEADER ============ */
+
+.eyebrow {
+	display: inline-block;
+	background: #fff;
+	color: #c2255c;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 24px;
+}
+
+.heading {
+	font-size: 48px !important;
+	line-height: 1.28 !important;
+	font-weight: 800;
+	color: #fff;
+	margin: 0 0 56px;
+	letter-spacing: -0.5px !important;
+	word-spacing: normal !important;
+}
+
+.highlight {
+	color: #f0452c;
+}
+
+/* ============ CARDS ============ */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 22px;
+}
+
+.card {
+	background: #14101f;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 16px;
+	padding: 44px 28px 36px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	will-change: transform;
+}
+
+.value {
+	display: block;
+	font-size: 72px !important;
+	font-weight: 800;
+	color: #d6266f;
+	line-height: 1;
+	margin-bottom: 22px;
+	letter-spacing: -1px !important;
+	word-spacing: normal !important;
+}
+
+.description {
+	max-width: 320px;
+	margin: 0;
+	font-size: 16px !important;
+	line-height: 1.55;
+	color: #9a9fac;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+	.heading {
+		font-size: 30px !important;
+	}
+	.grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+@media (max-width: 560px) {
+	.section {
+		padding: 64px 0 70px;
+	}
+	.heading {
+		font-size: 24px !important;
+		margin-bottom: 40px;
+	}
+	.card {
+		padding: 34px 22px 28px;
+	}
+	.value {
+		font-size: 42px !important;
+	}
+}

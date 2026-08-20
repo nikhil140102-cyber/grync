@@ -1,0 +1,166 @@
+.section {
+	background: #ffffff;
+	padding: 100px 0 90px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* ============ HEADER ============ */
+
+.eyebrow {
+	display: inline-block;
+	background: #fbdce8;
+	color: #c2255c;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 22px;
+}
+
+.heading {
+	font-size: 48px !important;
+	line-height: 1.25 !important;
+	font-weight: 800;
+	color: #14161a;
+	margin: 0 0 22px;
+	letter-spacing: -0.5px !important;
+	word-spacing: normal !important;
+}
+
+.highlight {
+	color: #f0452c;
+}
+
+.description {
+	max-width: 820px;
+	margin: 0 auto 54px;
+	font-size: 18px !important;
+	line-height: 1.7;
+	color: #667082;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+/* ============ GRID / CARD ============ */
+
+.gridStack {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 22px;
+	text-align: left;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border: 1px solid #f0eef2;
+	border-top: 4px solid transparent;
+	border-radius: 16px;
+	padding: 26px 24px 24px;
+	box-shadow: 0 14px 30px rgba(20, 22, 26, 0.06);
+	will-change: transform;
+}
+
+.theme-maroon {
+	border-top-color: #8f1d4a;
+}
+.theme-teal {
+	border-top-color: #0f8a8a;
+}
+.theme-orange {
+	border-top-color: #e2601f;
+}
+.theme-blue {
+	border-top-color: #2f6fe0;
+}
+.theme-green {
+	border-top-color: #17a463;
+}
+.theme-magenta {
+	border-top-color: #c2255c;
+}
+
+.cardIcon {
+	display: block;
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+	margin-bottom: 16px;
+}
+
+.cardTitle {
+	font-size: 18px !important;
+	font-weight: 800;
+	color: #14161a;
+	margin: 0 0 10px;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+.cardDescription {
+	font-size: 14px !important;
+	line-height: 1.6;
+	color: #667082;
+	margin: 0 0 20px;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+	flex-grow: 1;
+}
+
+/* one shared rule for every card's visual — previously each of the 6
+   hand-built mini-UIs had its own bespoke height (row 1's had
+   min-height: 170px, row 2's had none at all, which is why row 2
+   sat visibly shorter). A single fixed height applied uniformly
+   makes every card's visual — and therefore every card — the same
+   height regardless of the source image's native aspect ratio. */
+.cardVisual {
+	display: block;
+	width: 100%;
+	flex-shrink: 0;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 12px;
+	margin-top: auto;
+	overflow: hidden;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 991px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.heading {
+		font-size: 30px !important;
+	}
+}
+
+@media (max-width: 640px) {
+	.section {
+		padding: 70px 0 60px;
+	}
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.heading {
+		font-size: 24px !important;
+	}
+	.description {
+		font-size: 14px !important;
+		margin-bottom: 36px;
+	}
+}

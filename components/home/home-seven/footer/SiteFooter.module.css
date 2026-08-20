@@ -1,0 +1,127 @@
+.footer {
+	background: #101828;
+	padding: 56px 0 32px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+}
+
+/* ============ TOP ROW ============ */
+
+.topRow {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+
+.brand {
+	max-width: 380px;
+}
+
+.logo {
+	display: block;
+	width: 160px;
+	height: auto;
+	object-fit: contain;
+	margin-bottom: 16px;
+}
+
+.tagline {
+	font-size: 13.5px;
+	line-height: 1.6;
+	color: #9a9fac;
+	margin: 0;
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 28px;
+	margin-top: 6px;
+}
+
+.navLink {
+	font-size: 14px;
+	font-weight: 500;
+	color: #d3d5db;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.navLink:hover {
+	color: #fff;
+}
+
+/* ============ DIVIDER ============ */
+
+.divider {
+	height: 1px;
+	background: rgba(255, 255, 255, 0.12);
+	margin: 40px 0 24px;
+}
+
+/* ============ BOTTOM ROW ============ */
+
+.bottomRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.copyright {
+	font-size: 13px;
+	color: #8a8f98;
+	margin: 0;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+
+.socialLink {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.85;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.socialLink:hover {
+	opacity: 1;
+	transform: translateY(-2px);
+}
+
+.socialIcon {
+	width: 18px;
+	height: 18px;
+	object-fit: contain;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 44px 0 28px;
+	}
+	.topRow {
+		flex-direction: column;
+		gap: 24px;
+	}
+	.nav {
+		gap: 18px;
+	}
+	.bottomRow {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 18px;
+	}
+}

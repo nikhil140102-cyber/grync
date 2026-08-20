@@ -1,0 +1,153 @@
+.plans-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.plan-card {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	width: 360px;
+	padding: 2rem;
+	transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+	transform: translateY(-5px);
+}
+
+.card-header {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.card-header.popular {
+	border: 2px solid #f97316;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.price {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.plan-button {
+	background-color: #d63384;
+	color: white;
+	padding: 0.5rem 1.25rem;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+
+.plan-button:hover {
+	background-color: #c0246d;
+}
+
+.features-list {
+	list-style: none;
+	padding-left: 0;
+	line-height: 1.8;
+	font-size: 0.95rem;
+}
+
+.addons-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 4rem;
+}
+
+.addon-card {
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 1rem;
+	padding: 2rem;
+	width: 400px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.addon-badge {
+	background-color: #FF5841;
+	color: #ffffff;
+	font-weight: 600;
+	display: inline-block;
+	padding: 0.3rem 0.7rem;
+	border-radius: 0.5rem;
+	font-size: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+
+.addon-card .price {
+	font-weight: 600;
+	margin: 0.5rem 0 1rem;
+}
+
+.addon-button {
+	background-color: #d63384;
+	color: white;
+	padding: 0.6rem 1.25rem;
+	border-radius: 2rem;
+	margin-top: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.addon-button:hover {
+	background-color: #333;
+}
+
+.addon-note {
+	font-size: 0.875rem;
+	color: #555;
+	margin-top: 0.75rem;
+}
+
+
+
+.feature-item.coming-soon {
+	color: gray;
+	position: relative;
+	cursor: not-allowed;
+}
+
+/* Tooltip styles */
+.feature-item .tooltip {
+	visibility: hidden;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 4px 8px;
+	font-size: 12px;
+
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	transform: translateY(-5px);
+	white-space: nowrap;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.feature-item:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+}
+
+.ai-tag {
+	margin-left: 6px;
+	font-weight: 500;
+	color: #6c63ff; /* Optional: AI themed purple */
+}
+
+
