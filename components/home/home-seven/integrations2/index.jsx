@@ -241,7 +241,7 @@ const Integrations2 = () => {
 
 							<div className={styles.device}>
 								<img
-									src="/images/logo/Icon.png"
+									src="/images/logo/icon.png"
 									alt="grync.io"
 									className={styles.deviceLogo}
 								/>
