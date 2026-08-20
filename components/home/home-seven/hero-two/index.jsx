@@ -329,7 +329,7 @@ const HeroTwo = () => {
 								<div className={`${styles.badge} ${styles.badgeBR}`}>
 									<span className={`${styles.badgeIcon} ${styles.iconBlue}`}>
 										<img
-											src="/images/newhome/bh4.png"
+											src="/images/newhome/h4.png"
 											alt=""
 											className={styles.badgeIconImg}
 										/>
