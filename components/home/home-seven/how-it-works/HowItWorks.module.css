@@ -207,18 +207,66 @@
 
 @media (max-width: 640px) {
 	.section {
-		padding: 70px 0 60px;
+		padding: 50px 0 60px;
 	}
 	.grid {
 		grid-template-columns: 1fr;
 	}
+	.eyebrow {
+	font-size: 9px;
+	padding: 0px 16px;
+}
 	.heading {
-		font-size: 26px !important;
+		font-size: 24px !important;
 		margin-bottom: 36px;
 	}
-	.rulesBar {
+
+.stepBadge {
+	font-size: 10px !important;
+	padding: 0px 10px;
+
+}
+.cardIcon {
+	width: 42px;
+	height: 42px;
+}
+
+.cardTitle {
+	font-size: 18px !important;
+	
+}
+
+.cardHighlight {
+	font-size: 12px !important;
+}
+
+.cardDescription {
+	font-size: 12px !important;
+}
+.rulesBar {
 		flex-direction: column;
 		padding: 24px 22px;
 		border-radius: 18px;
 	}
+.rulesIcon {
+	width: 34px;
+	height: 34px; 
+}
+
+.rulesIconImg {
+	width: 22px;
+	height: 22px;
+}
+
+.rulesTitle {
+	font-size: 14px !important;
+	font-weight: 600;
+
+}
+
+.rulesDescription {
+	font-size: 12px !important;
+
+}
+	
 }

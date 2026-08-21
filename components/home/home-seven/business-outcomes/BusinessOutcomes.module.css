@@ -113,8 +113,12 @@
 
 @media (max-width: 560px) {
 	.section {
-		padding: 64px 0 70px;
+		padding: 50px 0 60px;
 	}
+	.eyebrow {
+	font-size: 9px;
+	padding: 0px 16px;
+}
 	.heading {
 		font-size: 24px !important;
 		margin-bottom: 40px;
@@ -124,5 +128,8 @@
 	}
 	.value {
 		font-size: 42px !important;
+	}
+	.description {
+	font-size: 12px !important;
 	}
 }
