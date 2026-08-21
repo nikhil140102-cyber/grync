@@ -155,11 +155,10 @@ const BusinessChallenge = () => {
 				<div className={styles.eyebrow}>THE BUSINESS CHALLENGE</div>
 
 				<h2 className={styles.heading}>
-					Everything you need to{" "}
-					<span className={styles.highlightText}>know &amp; act on is</span>
-					<br />
-					already in your systems
-				</h2>
+	Everything you need to{" "}
+	<span className={styles.highlightText}>know &amp; act on is</span>{" "}
+	already in your systems
+</h2>
 
 				<p className={styles.description}>
 					Right now, a customer is ready to buy. An account is about to
