@@ -27,7 +27,7 @@ function HomeSeven() {
       <ProductOverview />
       <Integrationsnew />
       <WhoUsesGrync />
-	  <CtaForm/>
+	    <CtaForm/>
       <FaqSection />
 
       {/* <ValuePillars />

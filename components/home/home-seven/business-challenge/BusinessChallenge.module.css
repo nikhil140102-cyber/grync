@@ -186,25 +186,56 @@
 
 @media (max-width: 640px) {
 	.section {
-		padding: 70px 0 60px;
+		padding: 50px 0 60px;
 	}
 	.grid {
 		grid-template-columns: 1fr;
 		margin-top: 36px;
 	}
+	.eyebrow {
+	
+	color: #c2255c;
+	font-size: 9px;
+	padding: 0px 16px;
+}
 	.heading {
-		font-size: 26px !important;
+		font-size: 24px !important;
 	}
 	.description,
 	.highlight {
-		font-size: 14px !important;
+		font-size: 12px !important;
 	}
+.cardIcon {
+	width: 45px;
+	height: 45px;
+	margin-bottom: 10px;
+}
+.cardValue {
+	font-size: 24px !important;
+	margin-bottom: 10px;
+	
+}
+
+.cardDescription {
+	font-size: 12px !important;
+	margin: 0 0 20px;
+	
+}
+
+.cardSource {
+	padding: 10px 12px;
+	font-size: 12px !important;
+	font-weight: 600;
+
+}
+
 	.footerPill {
 		padding: 16px 22px;
 		text-align: left;
+		border-radius: 24px;;
 	}
 	.footerPill p {
-		font-size: 14px !important;
+		font-size: 12px !important;
 	}
 	.footerStar {
 		right: 12px;
