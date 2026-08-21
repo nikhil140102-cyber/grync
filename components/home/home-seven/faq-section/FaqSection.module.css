@@ -112,8 +112,15 @@
 	.section {
 		padding: 70px 0 70px;
 	}
+	.eyebrow {
+	
+	font-size: 10px;
+	font-weight: 700;
+	padding: 0px 16px;
+	margin-bottom: 20px;
+}
 	.heading {
-		font-size: 26px !important;
+		font-size: 24px !important;
 		margin-bottom: 32px;
 	}
 	.question {

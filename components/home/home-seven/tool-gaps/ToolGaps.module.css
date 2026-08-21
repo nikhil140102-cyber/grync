@@ -458,13 +458,13 @@
 
 @media (max-width: 560px) {
 	.section {
-		padding: 70px 0 60px;
+		padding: 30px 0 60px;
 	}
 	.heading {
 		font-size: 24px !important;
 	}
 	.description {
-		font-size: 14px !important;
+		font-size: 12px !important;
 		margin-bottom: 44px;
 	}
 	.signalRow {
