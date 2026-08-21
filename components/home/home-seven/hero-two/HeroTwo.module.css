@@ -433,7 +433,13 @@
 		margin-top: 60px;
 	}
 	.heading {
-		font-size: 34px;
+		/* was missing !important — the base rule's 44px !important
+		   always wins over a plain override regardless of media query,
+		   so this never actually took effect before */
+		font-size: 34px !important;
+	}
+	.description {
+		font-size: 16px !important;
 	}
 }
 
@@ -442,11 +448,26 @@
    clipped by the card). Switch to a static, stacked layout instead of
    just shrinking pixel values. */
 @media (max-width: 680px) {
+	.heading {
+		font-size: 18px !important;
+	}
+	.description {
+		font-size: 12px !important;
+	}
+	.eyebrow {
+		font-size: 9px;
+	}
+	.primaryBtn,
+	.secondaryBtn {
+		font-size: 10px;
+		padding: 12px 20px;
+	}
+
 	.cardBody {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 32px 20px 28px;
+		padding: 24px 18px 22px;
 		min-height: auto;
 	}
 
@@ -456,29 +477,30 @@
 		display: none;
 	}
 
+	/* logo circle hidden on mobile — the two badge groups (top/bottom)
+	   animate in as one continuous set either way, since GSAP selects
+	   them by the shared .badge class rather than by which wrapper
+	   they're nested in */
 	.centerBadge {
-		position: static;
-		width: 132px;
-		height: 132px;
-		margin-bottom: 22px;
+		display: none;
 	}
 
-	.centerInner {
-		width: 104px;
-		height: 104px;
-	}
-
-	.centerMark {
-		width: 32px;
-		height: 32px;
-	}
-
-	.badgesWrap {
+	/* two tiles above the circle, two below — split from the old single
+	   4-badge wrapper into two 2-badge wrappers with .centerBadge sitting
+	   between them in the JSX. Desktop is unaffected: badges are
+	   position:absolute relative to .cardBody regardless of which
+	   non-positioned wrapper div they sit inside. */
+	.badgesWrapTop,
+	.badgesWrapBottom {
 		position: static;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 10px;
+		gap: 8px;
 		width: 100%;
+	}
+
+	.badgesWrapTop {
+		margin-bottom: 8px;
 	}
 
 	.badge,
@@ -497,13 +519,19 @@
 	}
 
 	.badge {
-		font-size: 12px;
-		padding: 10px 12px 10px 8px;
+		font-size: 10.5px;
+		gap: 6px;
+		padding: 8px 10px 8px 6px;
 	}
 
 	.badgeIcon {
-		width: 26px;
-		height: 26px;
+		width: 20px;
+		height: 20px;
+	}
+
+	.badgeIconImg {
+		width: 12px;
+		height: 12px;
 	}
 
 	.pulseDot {
@@ -512,15 +540,23 @@
 
 	.caption {
 		position: static;
-		margin-top: 20px;
+		margin-top: 16px;
+		font-size: 12px !important;
 	}
 }
 
 @media (max-width: 420px) {
-	.badgesWrap {
+	.heading {
+		font-size: 24px !important;
+	}
+	.description {
+		font-size: 14px !important;
+	}
+	.badgesWrapTop,
+	.badgesWrapBottom {
 		grid-template-columns: 1fr;
 	}
 	.badge {
-		font-size: 13px;
+		font-size: 12px;
 	}
 }
