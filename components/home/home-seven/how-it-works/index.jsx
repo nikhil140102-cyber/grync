@@ -135,7 +135,7 @@ const HowItWorks = () => {
 	}, []);
 
 	return (
-		<section ref={rootRef} className={styles.section}>
+		<section ref={rootRef} className={styles.section} id="HowGryncworks">
 			<div className={styles.container}>
 				<div className={styles.eyebrow}>HOW GRYNC WORKS</div>
 

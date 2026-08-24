@@ -2,10 +2,69 @@ import { google } from "googleapis";
 import { Resend } from "resend";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SHEET_RANGE = "Sheet1!A:F";
 
 const resend = process.env.RESEND_API_KEY
 	? new Resend(process.env.RESEND_API_KEY)
 	: null;
+
+/* ---- GET: password-gated read, used by the admin table page ---- */
+export async function GET(request) {
+	const password = request.headers.get("x-admin-password");
+
+	if (!process.env.ADMIN_PASSWORD) {
+		console.error("book-demo GET: ADMIN_PASSWORD is not set on the server.");
+		return Response.json(
+			{ error: "Admin access is not configured." },
+			{ status: 500 }
+		);
+	}
+
+	if (!password || password !== process.env.ADMIN_PASSWORD) {
+		return Response.json({ error: "Incorrect password." }, { status: 401 });
+	}
+
+	try {
+		const auth = new google.auth.JWT({
+			email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+			key: (process.env.GOOGLE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
+			scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+		});
+		const sheets = google.sheets({ version: "v4", auth });
+
+		const res = await sheets.spreadsheets.values.get({
+			spreadsheetId: process.env.GOOGLE_SHEET_ID,
+			range: SHEET_RANGE,
+		});
+
+		const rows = res.data.values || [];
+
+		// first row is a header if it doesn't look like an ISO timestamp
+		const dataRows = rows.length && /^\d{4}-\d{2}-\d{2}T/.test(rows[0][0])
+			? rows
+			: rows.slice(1);
+
+		const submissions = dataRows.map((row) => ({
+			timestamp: row[0] || "",
+			name: row[1] || "",
+			email: row[2] || "",
+			company: row[3] || "",
+			designation: row[4] || "",
+			systems: row[5] || "",
+		}));
+
+		// most recent first
+		submissions.reverse();
+
+		return Response.json({ submissions });
+	} catch (err) {
+		console.error("book-demo GET: Google Sheets read failed:", err);
+		return Response.json(
+			{ error: "Something went wrong loading submissions." },
+			{ status: 500 }
+		);
+	}
+}
 
 export async function POST(request) {
 	let body;
@@ -46,7 +105,7 @@ export async function POST(request) {
 
 		await sheets.spreadsheets.values.append({
 			spreadsheetId: process.env.GOOGLE_SHEET_ID,
-			range: "Sheet1!A:F",
+			range: SHEET_RANGE,
 			valueInputOption: "USER_ENTERED",
 			requestBody: {
 				values: [

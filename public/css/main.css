@@ -3,7 +3,9 @@
 *::before {
 	outline: 1px solid red;
 } */
-
+html {
+	scroll-behavior: smooth;
+}
 /*Header Css StaRT*/
 .site-navbar {
 	display: flex;

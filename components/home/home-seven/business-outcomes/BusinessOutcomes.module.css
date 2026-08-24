@@ -49,9 +49,11 @@
 	line-height: 1.28 !important;
 	font-weight: 800;
 	color: #fff;
-	margin: 0 0 56px;
 	letter-spacing: -0.5px !important;
 	word-spacing: normal !important;
+	margin: 0 auto 26px;
+	max-width: 820px;
+	align-items: center;
 }
 
 .highlight {

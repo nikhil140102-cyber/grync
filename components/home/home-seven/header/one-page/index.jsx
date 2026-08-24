@@ -8,25 +8,46 @@ import gsap from "gsap";
 import Logo from "@/public/images/logo/Grync_Logo_Color 1.png";
 
 const navItems = [
-	{
-		label: "Platform",
-		href: "/productBrief",
+	// {
+	// 	label: "Platform",
+	// 	href: "/productBrief",
+	// },
+	// {
+	// 	label: "Solutions",
+	// 	href: "/landingPage",
+	// },
+	// {
+	// 	label: "Why grync",
+	// 	href: "/faq-page",
+	// },
+	// {
+	// 	label: "Integrations",
+	// 	href: "/productBrief",
+	// },
+	// {
+	// 	label: "Resources",
+	// 	href: "/blog-page",
+	// },
+// 	How Grync works
+// Product overview
+// Systems and outcomes
+// Who uses Grync
+
+{
+		label: "How Grync works",
+		href: "/#HowGryncworks",
 	},
 	{
-		label: "Solutions",
-		href: "/landingPage",
+		label: "Product overview",
+		href: "/#Productoverview",
 	},
 	{
-		label: "Why grync",
-		href: "/faq-page",
+		label: "Systems and outcomes",
+		href: "/#Systemsandoutcomes",
 	},
 	{
-		label: "Integrations",
-		href: "/productBrief",
-	},
-	{
-		label: "Resources",
-		href: "/blog-page",
+		label: "Who uses Grync",
+		href: "/#WhousesGrync",
 	},
 ];
 

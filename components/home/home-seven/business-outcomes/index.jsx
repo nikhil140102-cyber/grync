@@ -85,8 +85,8 @@ const BusinessOutcomes = () => {
 
 				<h2 className={styles.heading}>
 					What changes when your systems
-					<br />
-					<span className={styles.highlight}>finally work together</span>.
+					
+					<span className={styles.highlight}> finally work together</span>.
 				</h2>
 
 				<div className={styles.grid}>

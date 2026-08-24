@@ -204,7 +204,7 @@ const ProductOverview = () => {
 	);
 
 	return (
-		<section ref={rootRef} className={styles.section}>
+		<section ref={rootRef} className={styles.section} id="Productoverview">
 			<div className={styles.container}>
 				<div className={styles.eyebrow}>PRODUCT OVERVIEW</div>
 

@@ -126,7 +126,7 @@ const WhoUsesGrync = () => {
 	}, [activeId]);
 
 	return (
-		<section ref={rootRef} className={styles.section}>
+		<section ref={rootRef} className={styles.section} id="WhousesGrync">
 			<div className={styles.container}>
 				<div className={styles.eyebrow}>WHO USES GRYNC</div>
 

@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import ModalVideo from "react-modal-video";
 import styles from "./HeroTwo.module.css";
 
 if (typeof window !== "undefined") {
@@ -13,6 +14,7 @@ if (typeof window !== "undefined") {
 const HeroTwo = () => {
 	const rootRef = useRef(null);
 	const cardRef = useRef(null);
+	const [isVideoOpen, setIsVideoOpen] = useState(false);
 
 	useEffect(() => {
 		const ctx = gsap.context(() => {
@@ -209,6 +211,15 @@ const HeroTwo = () => {
 
 	return (
 		<section ref={rootRef} className={styles.hero}>
+			{/* channel="custom" takes a plain MP4/iframe URL — swap this
+			    placeholder for your real hosted video file or embed URL */}
+			<ModalVideo
+				channel="custom"
+				url="/videos/product-demo.mp4"
+				isOpen={isVideoOpen}
+				onClose={() => setIsVideoOpen(false)}
+			/>
+
 			<div className={styles.container}>
 				{/* ================= LEFT ================= */}
 				<div className={styles.left}>
@@ -235,9 +246,13 @@ const HeroTwo = () => {
 						<Link href="/contact-us-page" className={styles.primaryBtn}>
 							Book a demo <span>→</span>
 						</Link>
-						<Link href="/productBrief" className={styles.secondaryBtn}>
+						<button
+							type="button"
+							onClick={() => setIsVideoOpen(true)}
+							className={styles.secondaryBtn}
+						>
 							Watch how it works <span>→</span>
-						</Link>
+						</button>
 					</div>
 				</div>
 
