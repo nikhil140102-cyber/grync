@@ -433,9 +433,6 @@
 		margin-top: 60px;
 	}
 	.heading {
-		/* was missing !important — the base rule's 44px !important
-		   always wins over a plain override regardless of media query,
-		   so this never actually took effect before */
 		font-size: 34px !important;
 	}
 	.description {
@@ -443,10 +440,17 @@
 	}
 }
 
-/* Below this width the absolutely-positioned badge layout no longer has
-   room (nowrap labels start colliding with the center badge and getting
-   clipped by the card). Switch to a static, stacked layout instead of
-   just shrinking pixel values. */
+/* Full desktop-style layout (connectors, logo, donut, cube, all 4
+   badges) kept intact on mobile too — rebuilt with percentage-based
+   positioning + aspect-ratio instead of fixed pixels, so every element
+   scales together by the same factor at any width. Mixing fixed-px
+   badge offsets with a proportionally-scaled SVG (the earlier version)
+   is what caused badges to drift out of alignment with the connector
+   lines, and collide with each other, at narrow widths — that's the
+   actual reason the previous mobile version stripped all of this out
+   in favor of a stacked layout. Percentages avoid that mismatch
+   entirely since both the badges and the SVG scale by the same
+   container-width-based factor. */
 @media (max-width: 680px) {
 	.heading {
 		font-size: 18px !important;
@@ -463,100 +467,103 @@
 		padding: 12px 20px;
 	}
 
+	/* matches the linesSvg viewBox ratio (700:480) so the SVG and the
+	   percentage-positioned badges below scale by the same factor */
 	.cardBody {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 24px 18px 22px;
+		aspect-ratio: 700 / 480;
+		padding: 0;
 		min-height: auto;
 	}
 
-	.linesSvg,
-	.donut,
-	.cube {
-		display: none;
+	.badgeTL {
+		top: 6%;
+		left: 4%;
 	}
-
-	/* logo circle hidden on mobile — the two badge groups (top/bottom)
-	   animate in as one continuous set either way, since GSAP selects
-	   them by the shared .badge class rather than by which wrapper
-	   they're nested in */
-	.centerBadge {
-		display: none;
+	.badgeTR {
+		top: 6%;
+		right: 4%;
 	}
-
-	/* two tiles above the circle, two below — split from the old single
-	   4-badge wrapper into two 2-badge wrappers with .centerBadge sitting
-	   between them in the JSX. Desktop is unaffected: badges are
-	   position:absolute relative to .cardBody regardless of which
-	   non-positioned wrapper div they sit inside. */
-	.badgesWrapTop,
-	.badgesWrapBottom {
-		position: static;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 8px;
-		width: 100%;
+	.badgeBL {
+		bottom: 22%;
+		left: 4%;
 	}
-
-	.badgesWrapTop {
-		margin-bottom: 8px;
-	}
-
-	.badge,
-	.badgeTL,
-	.badgeTR,
-	.badgeBL,
 	.badgeBR {
-		position: static !important;
-		inset: auto !important;
-		top: auto !important;
-		left: auto !important;
-		right: auto !important;
-		bottom: auto !important;
-		width: 100%;
-		white-space: normal;
+		bottom: 22%;
+		right: 4%;
 	}
 
 	.badge {
-		font-size: 10.5px;
-		gap: 6px;
-		padding: 8px 10px 8px 6px;
+		font-size: 9px;
+		gap: 4px;
+		padding: 5px 7px 5px 5px;
+		border-radius: 8px;
 	}
 
 	.badgeIcon {
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 	}
 
 	.badgeIconImg {
-		width: 12px;
-		height: 12px;
+		width: 9px;
+		height: 9px;
 	}
 
-	.pulseDot {
-		display: none;
+	.centerBadge {
+		width: 38%;
+		height: auto;
+		aspect-ratio: 1 / 1;
+	}
+
+	.centerMark {
+		width: 26% !important;
+		height: 26% !important;
+	}
+
+	.centerInner strong {
+		font-size: 11px;
+	}
+
+	.centerInner small {
+		font-size: 6px;
+	}
+
+	.donut {
+		width: 30%;
+		height: 30%;
+		left: -10%;
+		bottom: -10%;
+	}
+
+	.cube {
+		width: 22px;
+		height: 22px;
 	}
 
 	.caption {
-		position: static;
-		margin-top: 16px;
-		font-size: 12px !important;
+		font-size: 10px !important;
+		bottom: 3%;
+		padding: 0 2%;
 	}
 }
 
 @media (max-width: 420px) {
-	.heading {
-		font-size: 24px !important;
-	}
-	.description {
-		font-size: 14px !important;
-	}
-	.badgesWrapTop,
-	.badgesWrapBottom {
-		grid-template-columns: 1fr;
-	}
 	.badge {
-		font-size: 12px;
+		font-size: 8px;
+		padding: 4px 6px 4px 4px;
+	}
+	.badgeIcon {
+		width: 14px;
+		height: 14px;
+	}
+	.badgeIconImg {
+		width: 8px;
+		height: 8px;
+	}
+	.centerInner strong {
+		font-size: 10px;
+	}
+	.centerInner small {
+		font-size: 5.5px;
 	}
 }
