@@ -211,11 +211,14 @@ const HeroTwo = () => {
 
 	return (
 		<section ref={rootRef} className={styles.hero}>
-			{/* channel="custom" takes a plain MP4/iframe URL — swap this
-			    placeholder for your real hosted video file or embed URL */}
+			{/* channel="youtube" + videoId is the YouTube ID from a URL like
+			    youtube.com/watch?v=VIDEO_ID_HERE — swap this placeholder
+			    for your real video's ID before shipping 
+				https://www.youtube.com/watch?v=DMuJzCS6YHw
+				*/}
 			<ModalVideo
-				channel="custom"
-				url="/videos/product-demo.mp4"
+				channel="youtube"
+				videoId="DMuJzCS6YHw"
 				isOpen={isVideoOpen}
 				onClose={() => setIsVideoOpen(false)}
 			/>
