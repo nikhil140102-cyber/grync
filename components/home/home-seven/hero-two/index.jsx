@@ -218,7 +218,7 @@ const HeroTwo = () => {
 				*/}
 			<ModalVideo
 				channel="youtube"
-				videoId="DMuJzCS6YHw"
+				videoId="ennl1yqXb40"
 				isOpen={isVideoOpen}
 				onClose={() => setIsVideoOpen(false)}
 			/>
@@ -246,7 +246,7 @@ const HeroTwo = () => {
 					</p>
 
 					<div className={styles.actions}>
-						<Link href="/contact-us-page" className={styles.primaryBtn}>
+						<Link href="https://calendly.com/nikhil-grync/30min" className={styles.primaryBtn}>
 							Book a demo <span>→</span>
 						</Link>
 						<button

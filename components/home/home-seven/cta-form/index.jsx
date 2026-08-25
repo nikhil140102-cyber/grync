@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 import styles from "./CtaForm.module.css";
 
@@ -20,6 +21,10 @@ const initialForm = {
 	designation: "",
 	systems: "",
 };
+
+const EMAILJS_SERVICE_ID = "service_rhqho01";
+const EMAILJS_TEMPLATE_ID = "template_y5emzax";
+const EMAILJS_PUBLIC_KEY = "i_8_egfJd7WVCtOTJ";
 
 const CtaForm = () => {
 	const rootRef = useRef(null);
@@ -112,27 +117,28 @@ const CtaForm = () => {
 		setServerError("");
 
 		try {
-			// Posts to app/api/book-demo/route.js, which appends the lead
-			// to Google Sheets and sends a notification email via Resend.
-			const res = await fetch("/api/book-demo", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(form),
-			});
-
-			const data = await res.json().catch(() => ({}));
-
-			if (!res.ok) {
-				setServerError(
-					data.error || "Something went wrong. Please try again."
-				);
-				setStatus("error");
-				return;
-			}
+			// Sends directly from the browser via EmailJS — no backend
+			// route, no API endpoint, no server-side secret at all. The
+			// public key below is safe to expose client-side by design;
+			// EmailJS holds your actual email provider credentials on
+			// their end, not in this code.
+			await emailjs.send(
+				EMAILJS_SERVICE_ID,
+				EMAILJS_TEMPLATE_ID,
+				{
+					name: form.name,
+					email: form.email,
+					company: form.company,
+					designation: form.designation,
+					systems: form.systems || "\u2014",
+				},
+				{ publicKey: EMAILJS_PUBLIC_KEY }
+			);
 
 			setStatus("success");
 			setForm(initialForm);
 		} catch (err) {
+			console.error("CTA form: EmailJS send failed:", err);
 			setServerError("Something went wrong. Please try again.");
 			setStatus("error");
 		}

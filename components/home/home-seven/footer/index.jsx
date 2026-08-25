@@ -4,11 +4,27 @@ import Link from "next/link";
 import styles from "./SiteFooter.module.css";
 
 const navLinks = [
-	{ label: "Platform", href: "/platform" },
-	{ label: "Solutions", href: "/solutions" },
-	{ label: "Insights", href: "/insights" },
-	{ label: "Contact Us", href: "/contact-us-page" },
-	{ label: "Request Demo", href: "/contact-us-page" },
+	// { label: "Platform", href: "/platform" },
+	// { label: "Solutions", href: "/solutions" },
+	// { label: "Insights", href: "/insights" },
+	// { label: "Contact Us", href: "/contact-us-page" },
+	// { label: "Request Demo", href: "/contact-us-page" },
+	{
+		label: "How Grync works",
+		href: "/#HowGryncworks",
+	},
+	{
+		label: "Product overview",
+		href: "/#Productoverview",
+	},
+	{
+		label: "Systems and outcomes",
+		href: "/#Systemsandoutcomes",
+	},
+	{
+		label: "Who uses Grync",
+		href: "/#WhousesGrync",
+	},
 ];
 
 /* Each social icon is an image, opening in a new tab. Swap these

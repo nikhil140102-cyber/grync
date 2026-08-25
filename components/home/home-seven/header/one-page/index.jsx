@@ -154,15 +154,15 @@ const Header = () => {
 				{/* ACTIONS */}
 				<div className="grync-header-actions">
 
-					<Link
+					{/* <Link
 						href="/sign-in"
 						className="grync-signin"
 					>
 						Sign In
-					</Link>
+					</Link> */}
 
 					<Link
-						href="/contact-us-page"
+						href="https://calendly.com/nikhil-grync/30min"
 						className="grync-demo-btn"
 					>
 						<span>Book a demo</span>
