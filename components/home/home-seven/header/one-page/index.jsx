@@ -162,7 +162,7 @@ const Header = () => {
 					</Link> */}
 
 					<Link
-						href="https://calendly.com/nikhil-grync/30min"
+						href="https://outlook.office.com/bookwithme/user/a6861de85f98441aaa5e5134a58b87a3@grync.io/meetingtype/wDeA_LiHpEK46Qmt7Mn2FA2?anonymous&ismsaljsauthenabled&ep=mcard"
 						className="grync-demo-btn"
 					>
 						<span>Book a demo</span>

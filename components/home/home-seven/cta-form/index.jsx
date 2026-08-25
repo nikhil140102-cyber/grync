@@ -22,9 +22,9 @@ const initialForm = {
 	systems: "",
 };
 
-const EMAILJS_SERVICE_ID = "service_rhqho01";
-const EMAILJS_TEMPLATE_ID = "template_y5emzax";
-const EMAILJS_PUBLIC_KEY = "i_8_egfJd7WVCtOTJ";
+const EMAILJS_SERVICE_ID = "service_rkyf9cm";
+const EMAILJS_TEMPLATE_ID = "template_wxjv806";
+const EMAILJS_PUBLIC_KEY = "1yfQ3FikQwRL2GUbo";
 
 const CtaForm = () => {
 	const rootRef = useRef(null);
@@ -165,7 +165,7 @@ const CtaForm = () => {
 						nothing to prepare.
 					</p>
 
-					<Link href="/contact-us-page" className={styles.ctaButton}>
+					<Link href="https://outlook.office.com/bookwithme/user/a6861de85f98441aaa5e5134a58b87a3@grync.io/meetingtype/wDeA_LiHpEK46Qmt7Mn2FA2?anonymous&ismsaljsauthenabled&ep=mcard" className={styles.ctaButton}>
 						Book a demo <span>→</span>
 					</Link>
 				</div>

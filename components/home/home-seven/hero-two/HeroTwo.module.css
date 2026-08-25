@@ -1,9 +1,16 @@
 .hero {
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(180deg, #fdf1e8 0%, #fdece0 100%);
+	background: radial-gradient(
+		circle at 70% 45%,
+		#2E1A3C 0%,
+		#101828 100%
+	);
 	padding: 110px 0 90px;
 }
+
+
+
 
 .container {
 	max-width: 1320px;
@@ -23,7 +30,7 @@
 
 .eyebrow {
 	display: inline-block;
-	background: #fbdce8;
+	background: #fff;
 	color: #c2255c;
 	font-size: 12px;
 	font-weight: 700;
@@ -39,7 +46,7 @@
 	font-size: 44px !important;
 	line-height: 1.18 !important;
 	font-weight: 800;
-	color: #14161a;
+	color: #fff;
 	margin: 0 0 22px;
 	letter-spacing: -0.5px !important;
 	word-spacing: normal !important;
@@ -55,21 +62,25 @@
 
 .titleLine em {
 	font-style: normal;
-	color: #c2255c;
+	background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 	letter-spacing: inherit;
 }
 
 .gradientText {
-	background: linear-gradient(90deg, #f4511e 0%, #d6266f 100%);
+	background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 }
 
+
 .description {
 	font-size: 18px !important;
 	line-height: 1.7;
-	color: #5b6472;
+	color: #a9adba;
 	margin: 0 0 34px;
 	letter-spacing: normal !important;
 	word-spacing: normal !important;
@@ -129,8 +140,8 @@
 	position: relative;
 	background: #fff;
 	border-radius: 18px;
-	box-shadow: 0 30px 70px rgba(20, 22, 26, 0.14), 4px 0 0 rgba(214, 38, 111, 0.12),
-		0 4px 0 rgba(214, 38, 111, 0.12);
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45), 4px 0 0 rgba(214, 38, 111, 0.18),
+		0 4px 0 rgba(214, 38, 111, 0.18);
 	border: 1px solid rgba(214, 38, 111, 0.18);
 	overflow: hidden;
 	transform-style: preserve-3d;
@@ -362,6 +373,9 @@
 }
 
 /* ============ DECORATIONS ============ */
+/* real rendered images now (Torus.png / Cube.png) instead of the
+   CSS conic-gradient/mask and 3D-transform-with-3-spans constructions
+   that approximated them before */
 
 .donut {
 	position: absolute;
@@ -369,18 +383,8 @@
 	bottom: -90px;
 	width: 210px;
 	height: 210px;
-	border-radius: 50%;
-	background: conic-gradient(
-		from 220deg,
-		#c94f1e 0deg,
-		#f4602a 90deg,
-		#f8a24c 180deg,
-		#fbd2a6 260deg,
-		#c94f1e 360deg
-	);
-	-webkit-mask: radial-gradient(circle, transparent 44%, #000 45%);
-	mask: radial-gradient(circle, transparent 44%, #000 45%);
-	filter: drop-shadow(0 24px 34px rgba(196, 84, 24, 0.25));
+	object-fit: contain;
+	filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.35));
 	z-index: 0;
 	pointer-events: none;
 }
@@ -391,29 +395,9 @@
 	right: -26px;
 	width: 40px;
 	height: 40px;
-	transform-style: preserve-3d;
-	transform: rotateX(-18deg) rotateY(40deg);
+	object-fit: contain;
 	z-index: 2;
-	filter: drop-shadow(0 10px 14px rgba(20, 22, 26, 0.18));
-}
-
-.cube span {
-	position: absolute;
-	inset: 0;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.cube span:nth-child(1) {
-	transform: translateZ(20px);
-	background: linear-gradient(135deg, #f6f5f3, #e2ded8);
-}
-.cube span:nth-child(2) {
-	transform: rotateY(90deg) translateZ(20px);
-	background: linear-gradient(135deg, #f4602a, #d94a1a);
-}
-.cube span:nth-child(3) {
-	transform: rotateX(90deg) translateZ(20px);
-	background: linear-gradient(135deg, #cfc9c1, #a8a29b);
+	filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
 }
 
 /* ============ RESPONSIVE ============ */

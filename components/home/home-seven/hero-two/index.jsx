@@ -218,7 +218,7 @@ const HeroTwo = () => {
 				*/}
 			<ModalVideo
 				channel="youtube"
-				videoId="ennl1yqXb40"
+				videoId="DMuJzCS6YHw"
 				isOpen={isVideoOpen}
 				onClose={() => setIsVideoOpen(false)}
 			/>
@@ -246,7 +246,7 @@ const HeroTwo = () => {
 					</p>
 
 					<div className={styles.actions}>
-						<Link href="https://calendly.com/nikhil-grync/30min" className={styles.primaryBtn}>
+						<Link href="/contact-us-page" className={styles.primaryBtn}>
 							Book a demo <span>→</span>
 						</Link>
 						<button
@@ -261,12 +261,10 @@ const HeroTwo = () => {
 
 				{/* ================= RIGHT ================= */}
 				<div className={styles.right}>
-					<div className={styles.donut} />
-					<div className={styles.cube}>
-						<span />
-						<span />
-						<span />
-					</div>
+					{/* real rendered images now (Torus.png / Cube.png)
+					    instead of CSS-constructed shapes */}
+					<img src="/images/newhome/torus.png" alt="torus" className={styles.donut} />
+					<img src="/images/newhome/cube.png" alt="cube" className={styles.cube} />
 
 					<div ref={cardRef} className={styles.card}>
 						<div className={styles.cardTitlebar}>
