@@ -27,7 +27,7 @@ const tabs = [
 		label: "COO",
 		title: "COO",
 		description:
-			"Every operational risk and bottleneck, surfaced before it becomes a fire drill.",
+			"Every operational risk and bottleneck, surfaced and actioned on before it becomes a fire drill.",
 		url: "app.platform.io/dashboard/executive-coo",
 		image: "/images/newhome/s2.png",
 	},
@@ -138,10 +138,10 @@ const WhoUsesGrync = () => {
 					gets their own answer.
 				</h2>
 
-				<p className={styles.subheading}>
+				{/* <p className={styles.subheading}>
 					Turn business signals into actionable insights, so every leader
 					knows what needs attention and what to do next.
-				</p>
+				</p> */}
 
 				<div className={styles.tabRow}>
 					{tabs.map((t) => (
