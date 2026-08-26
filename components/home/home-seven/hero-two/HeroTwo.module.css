@@ -387,17 +387,20 @@
 	filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.35));
 	z-index: 0;
 	pointer-events: none;
+		filter: grayscale(1);
+
 }
 
 .cube {
 	position: absolute;
 	top: 42%;
-	right: -26px;
-	width: 40px;
-	height: 40px;
+	right: -46px;
+	width: 84px;
+	height: 84px;
 	object-fit: contain;
 	z-index: 2;
 	filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
+	filter: grayscale(1);
 }
 
 /* ============ RESPONSIVE ============ */

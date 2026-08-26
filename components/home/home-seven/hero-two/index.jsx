@@ -263,8 +263,8 @@ const HeroTwo = () => {
 				<div className={styles.right}>
 					{/* real rendered images now (Torus.png / Cube.png)
 					    instead of CSS-constructed shapes */}
-					<img src="/images/newhome/torus.png" alt="torus" className={styles.donut} />
-					<img src="/images/newhome/cube.png" alt="cube" className={styles.cube} />
+					<img src="/images/newhome/Torus.svg" alt="torus" className={styles.donut} />
+					<img src="/images/newhome/Cube.svg" alt="cube" className={styles.cube} />
 
 					<div ref={cardRef} className={styles.card}>
 						<div className={styles.cardTitlebar}>
@@ -370,7 +370,7 @@ const HeroTwo = () => {
 
 							<p className={styles.caption}>
 								Works with the tools you already run. No data
-								migration. No new pipelines.
+								migration. No leaks.
 							</p>
 						</div>
 					</div>
