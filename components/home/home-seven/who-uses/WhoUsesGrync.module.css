@@ -55,8 +55,10 @@
 }
 
 .highlight {
-	color: #f0552f;
-}
+background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;}
 
 /* ============ TABS ============ */
 
