@@ -214,11 +214,11 @@ const HeroTwo = () => {
 			{/* channel="youtube" + videoId is the YouTube ID from a URL like
 			    youtube.com/watch?v=VIDEO_ID_HERE — swap this placeholder
 			    for your real video's ID before shipping 
-				https://www.youtube.com/watch?v=DMuJzCS6YHw
+				
 				*/}
 			<ModalVideo
 				channel="youtube"
-				videoId="DMuJzCS6YHw"
+				videoId="ennl1yqXb40"
 				isOpen={isVideoOpen}
 				onClose={() => setIsVideoOpen(false)}
 			/>
@@ -246,7 +246,7 @@ const HeroTwo = () => {
 					</p>
 
 					<div className={styles.actions}>
-						<Link href="/contact-us-page" className={styles.primaryBtn}>
+						<Link href="https://outlook.office.com/bookwithme/user/a6861de85f98441aaa5e5134a58b87a3@grync.io/meetingtype/wDeA_LiHpEK46Qmt7Mn2FA2?anonymous&ismsaljsauthenabled&ep=mcard" className={styles.primaryBtn}>
 							Book a demo <span>→</span>
 						</Link>
 						<button

@@ -171,7 +171,7 @@ const Integrations2 = () => {
 	}, []);
 
 	return (
-		<section ref={rootRef} className={styles.section} id="Systemsandoutcomes">
+		<section ref={rootRef} className={styles.section} id="Systemstooutcomes">
 			<div className={styles.container}>
 				<div className={styles.eyebrow}>SYSTEMS TO OUTCOMES</div>
 

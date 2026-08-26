@@ -42,8 +42,8 @@ const navItems = [
 		href: "/#Productoverview",
 	},
 	{
-		label: "Systems and outcomes",
-		href: "/#Systemsandoutcomes",
+		label: "Systems to outcomes",
+		href: "/#Systemstooutcomes",
 	},
 	{
 		label: "Who uses Grync",
