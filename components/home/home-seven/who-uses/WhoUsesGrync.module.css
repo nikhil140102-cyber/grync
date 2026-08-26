@@ -60,6 +60,16 @@ background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
 	background-clip: text;
 	color: transparent;}
 
+.subheading {
+	font-size: 16px !important;
+	line-height: 1.6;
+	color: #9a9fac;
+	max-width: 620px;
+	margin: 0 0 30px;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
 /* ============ TABS ============ */
 
 .tabRow {
@@ -290,6 +300,9 @@ background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
 	.heading {
 		font-size: 28px !important;
 	}
+	.subheading {
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 640px) {
@@ -314,6 +327,9 @@ background: linear-gradient(90deg, #E4226E 0%, #F14E4A 47% ,#D36B00 100%);
 	}
 	.heading {
 		font-size: 24px !important;
+	}
+	.subheading {
+		font-size: 13px !important;
 	}
 	.roleTitle {
 		font-size: 28px !important;

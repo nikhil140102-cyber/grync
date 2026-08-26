@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -88,6 +86,11 @@ const WhoUsesGrync = () => {
 					"-=0.25"
 				)
 				.from(
+					`.${styles.subheading}`,
+					{ y: 18, opacity: 0, duration: 0.5 },
+					"-=0.35"
+				)
+				.from(
 					`.${styles.tabBtn}`,
 					{ y: 14, opacity: 0, duration: 0.4, stagger: 0.06 },
 					"-=0.3"
@@ -134,6 +137,11 @@ const WhoUsesGrync = () => {
 					One platform. <span className={styles.highlight}>Every leader</span>{" "}
 					gets their own answer.
 				</h2>
+
+				<p className={styles.subheading}>
+					Turn business signals into actionable insights, so every leader
+					knows what needs attention and what to do next.
+				</p>
 
 				<div className={styles.tabRow}>
 					{tabs.map((t) => (
