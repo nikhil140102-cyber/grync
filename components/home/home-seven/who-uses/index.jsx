@@ -18,7 +18,7 @@ const tabs = [
 		label: "CEO",
 		title: "CEO",
 		description:
-			"See the business as it is today, not as it was three days ago.",
+			"See the business as it is today, not as it was three days ago, with the next move recommended and ready to trigger.",
 		url: "app.platform.io/dashboard/executive-ceo",
 		image: "/images/newhome/s1.png",
 	},
@@ -36,7 +36,7 @@ const tabs = [
 		label: "CTO",
 		title: "CTO",
 		description:
-			"A live picture of system health and integration status across every connected tool.",
+			"A live picture of system health and integration status across every connected tool, with issues flagged and routed before they spread.",
 		url: "app.platform.io/dashboard/executive-cto",
 		image: "/images/newhome/s3.png",
 	},
@@ -45,7 +45,7 @@ const tabs = [
 		label: "CRO/CBO",
 		title: "CRO/CBO",
 		description:
-			"Pipeline risk and revenue signals in one view, so nothing slips between systems.",
+			"Pipeline risk and revenue signals in one view, so nothing slips between systems, the offer fires the day intent shows.",
 		url: "app.platform.io/dashboard/executive-cro",
 		image: "/images/newhome/s4.png",
 	},
@@ -54,7 +54,7 @@ const tabs = [
 		label: "CMO",
 		title: "CMO",
 		description:
-			"Campaign readiness and customer signals, connected to what your other teams already know.",
+			"Campaign readiness and customer signals, connected to what your other teams already know, so the campaign triggers on the moment, not the calendar.",
 		url: "app.platform.io/dashboard/executive-cmo",
 		image: "/images/newhome/s5.png",
 	},
