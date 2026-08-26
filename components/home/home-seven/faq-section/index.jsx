@@ -27,7 +27,7 @@ const faqs = [
 		id: "q3",
 		question: "Q3: How is this different from a BI or analytics platform?",
 		answer:
-			"iNo. grync.io sits above them. Your teams keep working in the tools they use today. What grync.io replaces is the slow manual chain between those tools, not the tools themselves. ",
+			"No. grync.io sits above them. Your teams keep working in the tools they use today. What grync.io replaces is the slow manual chain between those tools, not the tools themselves. ",
 	},
 	{
 		id: "q4",
