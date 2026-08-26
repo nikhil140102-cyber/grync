@@ -370,7 +370,7 @@ const HeroTwo = () => {
 
 							<p className={styles.caption}>
 								Works with the tools you already run. No data
-								migration. No leaks.
+								migration. No data leaks.
 							</p>
 						</div>
 					</div>
