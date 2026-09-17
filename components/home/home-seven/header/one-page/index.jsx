@@ -8,47 +8,48 @@ import gsap from "gsap";
 import Logo from "@/public/images/logo/Grync_Logo_Color 1.png";
 
 const navItems = [
-	// {
-	// 	label: "Platform",
-	// 	href: "/productBrief",
-	// },
-	// {
-	// 	label: "Solutions",
-	// 	href: "/landingPage",
-	// },
-	// {
-	// 	label: "Why grync",
-	// 	href: "/faq-page",
-	// },
-	// {
-	// 	label: "Integrations",
-	// 	href: "/productBrief",
-	// },
-	// {
-	// 	label: "Resources",
-	// 	href: "/blog-page",
-	// },
-// 	How Grync works
-// Product overview
-// Systems and outcomes
-// Who uses Grync
+	{
+		label: "Platform",
+		href: "/productBrief",
+	},
+	{
+		label: "Solution",
+		href: "/solution",
+	},
+	{
+		label: "About us",
+		href: "/aboutus",
+	},
+	{
+		label: "Integrations",
+		href: "/productBrief",
+	},
+	{
+		label: "Resources",
+		href: "/blog-page",
+	},
+	{
+		label: "Contact us",
+		href: "/contact-us",
+	},
 
-{
-		label: "How Grync works",
-		href: "/#HowGryncworks",
-	},
-	{
-		label: "Product overview",
-		href: "/#Productoverview",
-	},
-	{
-		label: "Systems to outcomes",
-		href: "/#Systemstooutcomes",
-	},
-	{
-		label: "Who uses Grync",
-		href: "/#WhousesGrync",
-	},
+
+// {
+// 		label: "How Grync works",
+// 		href: "/#HowGryncworks",
+// 	},
+// 	{
+// 		label: "Product overview",
+// 		href: "/#Productoverview",
+// 	},
+// 	{
+// 		label: "Systems to outcomes",
+// 		href: "/#Systemstooutcomes",
+// 	},
+// 	{
+// 		label: "Who uses Grync",
+// 		href: "/#WhousesGrync",
+// 	},
 ];
 
 const Header = () => {

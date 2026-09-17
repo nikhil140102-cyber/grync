@@ -1,0 +1,120 @@
+.section {
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(
+		circle at 72% 40%,
+		#241a30 0%,
+		#160f22 35%,
+		#0e0a17 65%,
+		#0a0712 100%
+	);
+	padding: 90px 0 100px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+}
+
+/* ============ HEADER ============ */
+
+.eyebrow {
+	display: inline-block;
+	background: transparent;
+	border: 1px solid #d6266f;
+	color: #d6266f;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 7px 16px;
+	border-radius: 6px;
+	margin-bottom: 22px;
+}
+
+.heading {
+	max-width: 900px;
+	font-size: 32px !important;
+	line-height: 1.4 !important;
+	font-weight: 800;
+	color: #fff;
+	margin: 0 0 30px;
+	letter-spacing: -0.3px !important;
+	word-spacing: normal !important;
+}
+
+/* ============ PANEL ============ */
+
+.panel {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+	max-width: 700px;
+	background: #14121f;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 14px;
+	padding: 24px 28px;
+}
+
+.panelText {
+	margin: 0;
+	font-size: 20px !important;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+.ctaButton {
+	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: #fff;
+	padding: 12px 22px;
+	border-radius: 8px;
+	text-decoration: none;
+	background: linear-gradient(90deg, #f4511e 0%, #d6266f 100%);
+	box-shadow: 0 10px 24px rgba(214, 38, 111, 0.28);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaButton:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 28px rgba(214, 38, 111, 0.36);
+	color: #fff;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+	.heading {
+		font-size: 24px !important;
+	}
+	.panel {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.ctaButton {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 560px) {
+	.section {
+		padding: 60px 0 70px;
+	}
+	.heading {
+		font-size: 20px !important;
+	}
+	.panel {
+		padding: 20px 22px;
+	}
+	.panelText {
+		font-size: 16px !important;
+	}
+}

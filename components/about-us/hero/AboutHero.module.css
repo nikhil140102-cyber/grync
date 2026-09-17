@@ -1,0 +1,137 @@
+.hero {
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(
+		circle at 72% 45%,
+		#241a30 0%,
+		#160f22 35%,
+		#0e0a17 65%,
+		#0a0712 100%
+	);
+	padding: 100px 0 90px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 40px;
+}
+
+/* ============ LEFT ============ */
+
+.left {
+	max-width: 560px;
+}
+
+.eyebrow {
+	display: inline-block;
+	background: #fdecd4;
+	color: #5b3a1a;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 24px;
+}
+
+.heading {
+	font-size: 44px !important;
+	line-height: 1.2 !important;
+	font-weight: 800;
+	margin: 0 0 22px;
+	letter-spacing: -0.5px !important;
+	word-spacing: normal !important;
+}
+
+.headingLine {
+	display: block;
+	color: #fff;
+}
+
+.orangeText {
+	color: #f4602a;
+}
+
+.redText {
+	color: #e8392a;
+}
+
+.description {
+	font-size: 16px !important;
+	line-height: 1.7;
+	color: #a9adba;
+	margin: 0 0 34px;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+.ctaButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 600;
+	font-size: 15px;
+	color: #fff;
+	padding: 14px 26px;
+	border-radius: 10px;
+	text-decoration: none;
+	background: linear-gradient(90deg, #f4511e 0%, #d6266f 100%);
+	box-shadow: 0 10px 24px rgba(214, 38, 111, 0.28);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaButton:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 28px rgba(214, 38, 111, 0.36);
+	color: #fff;
+}
+
+/* ============ RIGHT ============ */
+
+.right {
+	position: relative;
+}
+
+.heroImage {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 991px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+	.left {
+		max-width: 100%;
+		text-align: center;
+	}
+	.ctaButton {
+		margin: 0 auto;
+	}
+	.heading {
+		font-size: 34px !important;
+	}
+	.right {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 680px) {
+	.hero {
+		padding: 70px 0 60px;
+	}
+	.heading {
+		font-size: 26px !important;
+	}
+	.description {
+		font-size: 14px !important;
+	}
+}

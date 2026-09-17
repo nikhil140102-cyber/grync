@@ -4,27 +4,27 @@ import Link from "next/link";
 import styles from "./SiteFooter.module.css";
 
 const navLinks = [
-	// { label: "Platform", href: "/platform" },
-	// { label: "Solutions", href: "/solutions" },
-	// { label: "Insights", href: "/insights" },
-	// { label: "Contact Us", href: "/contact-us-page" },
-	// { label: "Request Demo", href: "/contact-us-page" },
-	{
-		label: "How Grync works",
-		href: "/#HowGryncworks",
-	},
-	{
-		label: "Product overview",
-		href: "/#Productoverview",
-	},
-	{
-		label: "Systems to outcomes",
-		href: "/#Systemstooutcomes",
-	},
-	{
-		label: "Who uses Grync",
-		href: "/#WhousesGrync",
-	},
+	{ label: "Platform", href: "/platform" },
+	{ label: "Solutions", href: "/solution" },
+	{ label: "Insights", href: "/insights" },
+	{ label: "Contact Us", href: "/contact-us" },
+	{ label: "Request Demo", href: "https://outlook.office.com/bookwithme/user/a6861de85f98441aaa5e5134a58b87a3@grync.io/meetingtype/wDeA_LiHpEK46Qmt7Mn2FA2?anonymous&ismsaljsauthenabled&ep=mcard" },
+	// {
+	// 	label: "How Grync works",
+	// 	href: "/#HowGryncworks",
+	// },
+	// {
+	// 	label: "Product overview",
+	// 	href: "/#Productoverview",
+	// },
+	// {
+	// 	label: "Systems to outcomes",
+	// 	href: "/#Systemstooutcomes",
+	// },
+	// {
+	// 	label: "Who uses Grync",
+	// 	href: "/#WhousesGrync",
+	// },
 ];
 
 /* Each social icon is an image, opening in a new tab. Swap these

@@ -1,0 +1,119 @@
+.hero {
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(
+		circle at 72% 45%,
+		#241a30 0%,
+		#160f22 35%,
+		#0e0a17 65%,
+		#0a0712 100%
+	);
+	padding: 100px 0 0px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 40px;
+}
+
+/* ============ LEFT ============ */
+
+.left {
+	max-width: 560px;
+}
+
+.eyebrow {
+	display: inline-block;
+	background: #fdecd4;
+	color: #5b3a1a;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em !important;
+	word-spacing: normal !important;
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 24px;
+}
+
+.heading {
+	font-size: 44px !important;
+	line-height: 1.2 !important;
+	font-weight: 800;
+	margin: 0 0 22px;
+	letter-spacing: -0.5px !important;
+	word-spacing: normal !important;
+}
+
+.headingLine {
+	display: block;
+	color: #fff;
+}
+
+.gradientText {
+	background: linear-gradient(90deg, #d6266f 0%, #f4602a 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.description {
+	font-size: 16px !important;
+	line-height: 1.7;
+	color: #a9adba;
+	margin: 0;
+	letter-spacing: normal !important;
+	word-spacing: normal !important;
+}
+
+/* ============ RIGHT ============ */
+
+.right {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.photo {
+	display: block;
+	width: 100%;
+	max-width: 540px;
+	height: auto;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 991px) {
+	.container {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.left {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.heading {
+		font-size: 34px !important;
+	}
+	.right {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 680px) {
+	.hero {
+		padding: 70px 0 60px;
+	}
+	.heading {
+		font-size: 26px !important;
+	}
+	.description {
+		font-size: 14px !important;
+	}
+	.photo {
+		max-width: 320px;
+	}
+}

@@ -1,0 +1,143 @@
+.wrap {
+	position: static;
+	padding: 16px 0;
+	background: #fff;
+}
+
+.navBar {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+	background: #f4f5f7;
+	border-radius: 999px;
+	padding: 10px;
+	overflow-x: auto;
+	justify-content: space-between
+}
+
+.navItem {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-shrink: 0;
+	background: transparent;
+	border: 1.5px solid transparent;
+	border-radius: 999px;
+	padding: 10px 18px;
+	cursor: pointer;
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.navIcon {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+/* three <img> tags stacked on top of each other, swapped via opacity
+   instead of swapping the src in JS — keeps hover instant/CSS-only
+   with no re-render, and avoids a layout jump between variants */
+.iconStack {
+	position: relative;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	flex-shrink: 0;
+}
+
+.iconStack .navIcon {
+	position: absolute;
+	inset: 0;
+	transition: opacity 0.15s ease;
+}
+
+.iconDefault {
+	opacity: 1;
+}
+
+.iconHover {
+	opacity: 0;
+}
+
+.iconActiveImg {
+	opacity: 0;
+}
+
+.navItem:hover .iconDefault {
+	opacity: 0;
+}
+.navItem:hover .iconHover {
+	opacity: 1;
+}
+
+/* active state wins over hover if both apply at once */
+.navItemActive .iconDefault,
+.navItemActive .iconHover {
+	opacity: 0 !important;
+}
+.navItemActive .iconActiveImg {
+	opacity: 1 !important;
+}
+
+.navLabel {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.3;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.navLabel span {
+	font-size: 13px;
+	font-weight: 600;
+	color: #4a4f5c;
+}
+
+/* active tab: gradient border + light peach fill + pink text/icon —
+   uses the dual-background trick (one layer for the fill, one for
+   the border) so the border can be a gradient rather than a flat color */
+.navItemActive {
+	background-image: linear-gradient(#fdf1e8, #fdf1e8),
+		linear-gradient(90deg, #d6266f 0%, #f4602a 100%);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+
+.navItemActive .navLabel span {
+	color: #c2255c;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+	.navBar {
+		justify-content: flex-start;
+	}
+	.navItem {
+		padding: 9px 14px;
+	}
+	.navLabel span {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 560px) {
+	.wrap {
+		padding: 12px 0;
+	}
+	.iconStack,
+	.navIcon {
+		width: 18px;
+		height: 18px;
+	}
+	.navItem {
+		gap: 8px;
+		padding: 8px 12px;
+	}
+	.navLabel span {
+		font-size: 11px;
+	}
+}

@@ -1,0 +1,10 @@
+.section {
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 90px;
+}
+
+.container {
+	width: min(1350px, calc(100% - 80px));
+	margin: 0 auto;
+}
